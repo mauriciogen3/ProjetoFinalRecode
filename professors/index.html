@@ -13,14 +13,13 @@
   <link rel="stylesheet" href="./style.css" />
   <script src="https://kit.fontawesome.com/a8657668a1.js" crossorigin="anonymous"></script>
 
-
-  <title>[RE]CODEV 5 - Professors</title>
+  <title>[RE]CODEV 5</title>
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../">Professor Allocation</a>
+      <a class="navbar-brand" href="/professors">Professor</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,8 +56,8 @@
           <th scope="col">Name</th>
           <th scope="col">CPF</th>
           <th scope="col">Department</th>
-          <th scope="col"><i class="far fa-edit"></i></th>
-          <th scope="col"><i class="far fa-trash-alt"></i></th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
@@ -75,6 +74,7 @@
           </button>
         </div>
         <div class="modal-body">
+          <p>*Required fields</p>
           <form>
             <div class="form-group">
               <label for="txtName">Name*</label>
@@ -90,59 +90,62 @@
                 <option value="selected" selected>Select a department</option>
               </select>
             </div>
-            <br>
-            <p>*Required field</p>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
               </button>
-              <button id="btnModalCreate" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save
+              <button id="btnModalCreate" type="button" class="btn btn-success" data-bs-dismiss="modal">Save
               </button>
             </div>
         </div>
       </div>
     </div>
-    <!-- Modal DELETE-->
-    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalDeleteTitle">Delete Professor</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div><!-- Fechamento Modal Delete header-->
-          <div class="modal-body">
-            <p>Do you want to delete professor: <strong id="txtDeleteProfessor"></strong></p>
-          </div><!-- Fechamento Modal Delete body-->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
-            </button>
-            <button id="btnModalDelete" type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete
-            </button>
-          </div><!-- Fechamento Modal Delete footer-->
-        </div><!-- Fechamento Modal Delete Content-->
+  </div>
+  <!-- Modal DELETE-->
+
+  <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDeleteTitle">Delete Professor</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to delete professor: <strong id="txtDeleteProfessor"></strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
+          </button>
+          <button id="btnModalDelete" type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete
+          </button>
+        </div>
       </div>
-    </div><!-- Fechamento Modal Delete-->
+    </div>
+  </div>
 
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
       -->
-    <script src="../service/api.js"></script>
-    <script src="./script.js"></script>
+  <script src="../service/api.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
