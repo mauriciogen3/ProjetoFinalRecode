@@ -12,11 +12,13 @@ button.addEventListener('click',(event)=> {
     email.classList.add("errorInput")
   } else{
     email.classList.remove("errorInput")
+  }
 
   if (password.value==''){
     password.classList.add("errorInput")
   } else{
     password.classList.remove("errorInput")
+  }
 
   if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
     email.classList.add("errorInput")
@@ -33,5 +35,6 @@ button.addEventListener('click',(event)=> {
   } else{
     password.classList.remove.remove("errorInput")
   }
+
   
 })
