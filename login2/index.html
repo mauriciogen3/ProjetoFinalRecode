@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/login2/style.css">
+
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Document</title>
 </head>
@@ -13,13 +15,14 @@
             <h1>Entrar</h1>
     
             <div class="label-float">
-                <input type="text" id="usuario" paceholder="">
+                <input type="text" id="usuario" paceholder="" required>
                 <label for="usuario">Usuário</label>
             </div>
     
             <div class="label-float">
-                <input type="password" id="senha" paceholder="">
+                <input type="password" id="senha" paceholder="" required>
                 <label for="password">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
             </div>
     
             <div class="justify-center">
@@ -29,10 +32,12 @@
             <div class="justify-center">
                 <hr>
             </div>
-    <p>Não tem uma conta? <a href="">Cadastre-se</a></p>
+    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
     
             </div>
         </div>
+
+        <script src="/login2/script.js"></script>
     
 </body>
 </html>

@@ -7,9 +7,8 @@
 }
 
 body{
-    background-image: url(/public/img/BG3.jpg);
+    background-image: url(/public/img/bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
     
 }
@@ -27,6 +26,8 @@ body{
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060;
+    width: 500px;
+    
 }
 
 h1{
@@ -106,32 +107,7 @@ button:hover{
     justify-content: center;
 }
 
-hr{
-    margin-top: 10%;
-    margin-bottom:10%;
-    width:60%;
-}
-
-
-p{
-    color:#fff;
-    font-size: 14pt;
-    text-align: center;
-    }
-
-    a{
-        color:#F28705;
-        font-weight: bold;
-        text-decoration: none;
-        transition: all .3s ease-out;
-
-        
-    }
-
-    a:hover{
-        color:#fff;
-
-    }
+    
 
      input{
         height: 40px;
@@ -143,14 +119,25 @@ p{
         font-size: 1.1rem;
         padding: 0 10px;
         margin-bottom: 3px;
-            }
+      
+      }
 
-            .fa-eye{
-                position: absolute;
-                top: 28px;
-                right: 10px;
-                cursor: pointer;
-                color:#fff
-            }
+      
+      .fa-eye{
+        position: absolute;
+        top: 28px;
+        right: 10px;
+        cursor: pointer;
+        color:#fff
+    }
 
+    .logo{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.35rem;
+      }
     }

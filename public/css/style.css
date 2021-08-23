@@ -155,3 +155,11 @@ a:hover{
   .errorInput{
     border: 2px solid rgb(207,53,53) !important;
   }
+
+  .left .fa-eye{
+    position: absolute;
+    top: 378px;
+    right: 763px;
+    cursor: pointer;
+    color:#fff
+}
