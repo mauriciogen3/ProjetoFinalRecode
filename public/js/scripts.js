@@ -33,4 +33,5 @@ button.addEventListener('click',(event)=> {
   } else{
     password.classList.remove.remove("errorInput")
   }
+  
 })
