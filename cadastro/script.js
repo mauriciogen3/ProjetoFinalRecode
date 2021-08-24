@@ -42,12 +42,12 @@ nome.addEventListener('keyup', () => {
 usuario.addEventListener('keyup', () => {
     if(usuario.value.length <= 4){
         labelUsuario.setAttribute('style','color: red')
-        labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'  
+        labelUsuario.innerHTML = 'Email ou telefone *Insira no minimo 5 caracteres'  
         usuario.setAttribute('style','border-color: red')
         validUsuario = false
     } else{
         labelUsuario.setAttribute('style','color: green')
-        labelUsuario.innerHTML = 'Usuário'
+        labelUsuario.innerHTML = 'Email ou telefone'
         usuario.setAttribute('style','border-color: green')
         validUsuario = true
 
@@ -86,10 +86,36 @@ confirmSenha.addEventListener('keyup', () => {
 })
 function cadastrar(){
     if(validNome && validUsuario && validSenha && validConfirmSenha){
+
+        let listaUser = JSON.parse(localStorage.getItem('listaUser')|| '[]')
+
+        listaUser.push(
+            {
+                nomeCad: nome.value,
+                userCad: usuario.value,
+                senhaCad: senha.value
+            }
+        )
+
+        localStorage.setItem('listaUser',JSON.stringify(listaUser))
+
+
+
         msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
+        msgSuccess.innerHTML = '<strong>Cadastrando Usuário...</strong>'
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
+
+        /*setTimeout(()=>{
+            window.location.href = 
+            'http://127.0.0.1:5500/index.html'
+        }, 3000)
+*/
+
+setTimeout(()=>{
+    window.location.href = 'http://127.0.0.1:5500/index.html'
+}, 3000)
+
 
     }else {
         msgError.setAttribute('style', 'display: block')
