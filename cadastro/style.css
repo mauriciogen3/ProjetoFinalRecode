@@ -53,7 +53,7 @@ h1{
 .label-float{
     position: relative;
     padding-top: 13px;
-    margin-top 5%;
+    margin-top: 5%;
     margin-bottom: 5%;
 
 }
@@ -140,4 +140,23 @@ button:hover{
         font-weight: bold;
         font-size: 1.35rem;
       }
-    }
+    
+      #msgError{
+          text-align: center;
+          color: #ff0000;
+          background-color: #ffbbbb;
+          padding: 10px;
+          border-radius: 4px;
+          display: none;
+
+      }
+
+      #msgSuscess{
+        text-align: center;
+        color: #00bb00;
+        background-color: #bbffbe;
+        padding: 10px;
+        border-radius: 4px;
+        display: none;
+
+      }

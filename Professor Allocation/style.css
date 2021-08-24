@@ -2,6 +2,7 @@ body{
   margin:  0;
   padding: 0;
   background-color: #fff;
+
 }
 
 .principal{
@@ -82,9 +83,6 @@ a{
 }
 a:hover{
   color: black;
-}
-btnAdd{
-  
 }
 
 #tela4 {

@@ -28,7 +28,7 @@ body{
 }
 
 body h2{
-  color: #F28705;
+  color: #fff;
 }
 
 img{
@@ -158,8 +158,8 @@ a:hover{
 
   .left .fa-eye{
     position: absolute;
-    top: 378px;
-    right: 763px;
+    top: 350px;
+    right: 663px;
     cursor: pointer;
     color:#fff
 }
