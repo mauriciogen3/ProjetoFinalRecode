@@ -6,34 +6,34 @@ button.addEventListener('click',(event)=> {
   //alert('botao acionado')
 
   const email = document.getElementById('email')
-  const password = document.getElementById('password')
+  const senha = document.getElementById('senha')
 
-  if (email.value==''){
-    email.classList.add("errorInput")
+  if (usuario.value==''){
+    usuario.classList.add("errorInput")
   } else{
-    email.classList.remove("errorInput")
+    usuario.classList.remove("errorInput")
   }
 
-  if (password.value==''){
-    password.classList.add("errorInput")
+  if (senha.value==''){
+    senha.classList.add("errorInput")
   } else{
-    password.classList.remove("errorInput")
+    senha.classList.remove("errorInput")
   }
 
-  if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
-    email.classList.add("errorInput")
+  if (usuario.value.indexOf("@") == -1 || usuario.value.indexOf(".") == -1 || (usuario.value.indexOf(".") - usuario.value.indexOf("@") == 1)) {
+    usuario.classList.add("errorInput")
   } else{
-    email.classList.remove("errorInput")
+    usuario.classList.remove("errorInput")
   }
 
-  if (!isNaN(email.value) == true && email.value.length == 11){
-    email.classList.remove("errorInput")
+  if (!isNaN(usuario.value) == true && usuario.value.length == 11){
+    usuario.classList.remove("errorInput")
   } 
 
-  if(password.value.length <=5){
-    password.classList.add("errorInput")
+  if(senha.value.length <=5){
+    senha.classList.add("errorInput")
   } else{
-    password.classList.remove.remove("errorInput")
+    senha.classList.remove("errorInput")
   } 
 
 })
@@ -41,12 +41,68 @@ button.addEventListener('click',(event)=> {
 let btn = document.querySelector('.fa-eye')
 
 btn.addEventListener('click',()=>{
-    let inputSenha = document.querySelector('#password')
+    let inputSenha = document.querySelector('#senha')
 
-    if(inputSenha.getAttribute('type') =='password'){
+    if(inputSenha.getAttribute('type') =='senha'){
         inputSenha.setAttribute('type', 'text')
     } else{
-        inputSenha.setAttribute('type', 'password')
+        inputSenha.setAttribute('type', 'senha')
 
     }
 })
+
+function entrar(){
+
+  let usuario = document.querySelector("#usuario")
+  let userLabel = document.querySelector("#userLabel")
+
+  let senha = document.querySelector("#senha")
+  let senhaLabel = document.querySelector("#senhaLabel")
+
+  let msgError = document.querySelector("#msgError")
+  let listUser = []
+
+  let userValid = {
+    nome:"",
+    user:"",
+    senha:""  
+  }
+
+  listaUser = JSON.parse(localStorage.getItem("listaUser"))
+
+  listaUser.forEach((item)=>{
+    if(usuario.value == item.userCad && senha.value == item.senhaCad){
+   
+      userValid = {        
+        nome: item.nomeCad,
+        user:item.userCad,
+        senha:item.senhaCad
+      }
+
+    }
+  })
+
+  if(usuario.value == userValid.user && senha.value == userValid.senha){
+
+
+    setTimeout(()=>{
+      window.location.href="http://127.0.0.1:5500/Professor%20Allocation/index.html"
+    }, 2000)
+
+    let token = Ma.random().toString(16)
+
+
+} else {
+
+userLabel.setAttribute ("style", "color: red")
+usuario.setAttribute ("style", "border-color: red")
+senhaLabel.setAttribute ("style", "color: red")
+senha.setAttribute ("style", "border-color: red")
+
+msgError.setAttribute("style", "display: block")
+msgError.innerHTML = "Usuario ou senha incorretos"
+usuario.focus()
+
+}
+
+}

@@ -158,8 +158,19 @@ a:hover{
 
   .left .fa-eye{
     position: absolute;
-    top: 350px;
-    right: 663px;
+    top: 385px;
+    right: 740px;
     cursor: pointer;
     color:#fff
 }
+
+#msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+
+}
+

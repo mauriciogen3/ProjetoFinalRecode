@@ -150,3 +150,19 @@ btnConfirm.addEventListener('click',()=>{
     }
 })
 
+function validateForm() {
+  
+  
+    var username=document.forms["loginEmail"]["username"].value;
+    var passowrd=document.forms["loginEmail"]["password"].value;
+    
+    
+    if ((username == "KeithSimpson") && (password == "KeithSimpson10")) {
+             window.location.href = 'inbox.html';
+              return false;
+          }
+          else {
+              alert ("Login unsuccessful.");
+          }
+    
+  }
